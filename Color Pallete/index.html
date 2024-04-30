@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Palette</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar with brand logo and toggle button -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <!-- Brand logo with Font Awesome icon -->
+          <i class="fas fa-palette mr-2"></i>Color Palette
+        </a>
+        <!-- Navbar toggle button for responsive navigation -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar content with menu items -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav">
+            <!-- Menu item for plain color selection -->
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="plainBtn">
+                <i class="fas fa-paint-brush"></i>
+              </a>
+            </li>
+            <!-- Menu item for gradient color selection -->
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="gradientBtn">
+                <i class="fas fa-fill-drip"></i>
+              </a>
+            </li>
+            <!-- Menu item for dark mode toggle -->
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="darkModeBtn">
+                <i class="fas fa-moon"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <!-- Title for color selector -->
+          <h2 class="text-center mb-4">Background Color Selector</h2>
+          <div class="color-picker-container" id="colorPickerContainer">
+            <!-- Color input fields -->
+            <div class="form-group">
+              <input
+                type="color"
+                id="color1"
+                class="form-control"
+                value="#00ff00"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="color"
+                id="color2"
+                class="form-control"
+                value="#0000ff"
+              />
+            </div>
+            <!-- Color display text -->
+            <div class="color-display mt-3" id="colorDisplay">
+              #00ff00 to #0000ff
+            </div>
+            <!-- Options container for gradient selection -->
+            <div class="options mt-3" id="optionsContainer">
+              <select
+                id="gradientType"
+                class="form-control"
+                style="display: none"
+              >
+                <option value="linear">Linear Gradient</option>
+              </select>
+              <!-- Button for generating random gradient -->
+              <button id="randomGradientBtn" class="btn btn-primary mt-2">
+                Random Gradient
+              </button>
+            </div>
+            <!-- Options container for plain color selection -->
+            <div class="options mt-3" id="plainOptionsContainer">
+              <!-- Button for generating random color -->
+              <button id="randomColorBtn" class="btn btn-primary mt-2">
+                Random Color
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Font Awesome JavaScript -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
